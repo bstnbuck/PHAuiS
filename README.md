@@ -5,7 +5,7 @@
 
 ## PHAuiS🔑
 
-:grey_question: **Rating** is based on:
+:grey_question: **Rating** is based on:<br>
 <sub>\* in combination with another symbol</sub>
 
 * **Currently one of the best***: :heavy_check_mark:
@@ -13,7 +13,6 @@
 * Moderate: :yellow_circle:
 * *Bad*: :red_circle:
 * *Couldn't be worse**: :x:
-[[]()] 
 
 <details>
 <summary>
@@ -69,7 +68,7 @@
 | ILIAS e-Learning | >5.(0,1,2).X  | bcrypt <sub>(with/without Salt)</sub> &rarr; :green_circle: | [[1](https://docu.ilias.de/goto_docu_wiki_wpage_4198_1357.html)] | |
 | ILIAS e-Learning | <5.(0,1,2).X  | MD5 <sub>without Salt</sub> &rarr; :red_circle: | [[1](https://docu.ilias.de/goto_docu_wiki_wpage_4198_1357.html)] | |
 | ISPconfig | all | crypt <sub>Linux defaults</sub> &rarr; :red_circle::yellow_circle: or :green_circle:|  |  |
-| Joomla  | >4.0.0 |  MD5 <sub>(without Salt)</sub> &rarr;:red_circle: <br> bcrypt (default) &rarr; :green_circle: <br> Argon2(i, id) &rarr; :green_circle::heavy_check_mark: | [[1](https://github.com/joomla/joomla-cms/blob/4.4-dev/libraries/src/User/UserHelper.php)] | |
+| Joomla  | >4.0.0 |  MD5 <sub>(without Salt)</sub> &rarr; :red_circle: <br> bcrypt (default) &rarr; :green_circle: <br> Argon2(i, id) &rarr; :green_circle::heavy_check_mark: | [[1](https://github.com/joomla/joomla-cms/blob/4.4-dev/libraries/src/User/UserHelper.php)] | |
 | KeePass | >2.X | AES-KDF &rarr; :red_circle: <br> Argon2(d, id) &rarr; :green_circle::heavy_check_mark: | [[1](https://keepass.info/help/base/security.html)] |  |
 | LastPass | - | PBKDF2 <sub>key-stretching 100.100</sub> &rarr; :green_circle::heavy_check_mark: | [[1](https://blog.lastpass.com/2022/12/notice-of-recent-security-incident/)] | |
 | LDAP | ? | SHA1, MD5 <sub>with and without Salt</sub> &rarr; :red_circle:, :red_circle::yellow_circle: <br> Linux crypt(3) (MD5, Blowfish, SHA2 (256, 512 bit)) <sub>with Salt and Key stretching</sub> &rarr; :red_circle::yellow_circle: up to :green_circle: | [[1](https://www.openldap.org/doc/admin24/security.html)] [[2](https://man7.org/linux/man-pages/man3/crypt.3.html)] [[3](https://www.rfc-editor.org/rfc/rfc4519.txt)] | official RFC specifies no encryption/hash |
@@ -79,11 +78,11 @@
 | ownCloud core | all | bcrypt <sub>(without Salt)</sub> &rarr; :green_circle: | [[1](https://doc.owncloud.com/server/next/admin_manual/configuration/server/harden_server.html#limit-on-password-length)] | |
 | PI-hole | all | SHA2 256 bit <sub>without Salt, key-stretching 2x</sub> &rarr; :yellow_circle: | [[1](https://github.com/pi-hole/web/blob/master/scripts/pi-hole/php/password.php#L42)] | |
 | Prestashop  | all |  MD5 <sub>(with Salt)</sub> &rarr;:red_circle: | [[1](https://github.com/PrestaShop/PrestaShop/blob/develop/src/Core/Security/Hashing.php)] | |
-| Typo3 | all | MD5 <sub>(with Salt)</sub> &rarr;:red_circle: <br> blowfish, phpass<sub>(with password stretching)</sub> &rarr;:red_circle: <br> PBKDF2, bcrypt <sub>(without Salt)</sub> &rarr; :green_circle: <br> Argon2(i, id) &rarr; :green_circle::heavy_check_mark: | [[1](https://github.com/h44z/wg-portal/blob/master/internal/domain/user.go#L127)] | |
+| Typo3 | all | MD5 <sub>(with Salt)</sub> &rarr; :red_circle: <br> blowfish, phpass<sub>(with password stretching)</sub> &rarr; :red_circle: <br> PBKDF2, bcrypt <sub>(without Salt)</sub> &rarr; :green_circle: <br> Argon2(i, id) &rarr; :green_circle::heavy_check_mark: | [[1](https://github.com/h44z/wg-portal/blob/master/internal/domain/user.go#L127)] | |
 | Slack | - | SHA256 <sub>(with Salt)</sub> &rarr; :green_circle: | [[1](https://news.sophos.com/en-us/2022/08/08/slack-admits-to-leaking-hashed-passwords-for-three-months/)] | |
 | urbackup | all | PBKDF2 with SHA512 <sub>Internet-User secret; without Salt, key-stretching 20.000</sub> &rarr; :yellow_circle::green_circle: <br> PBKDF2 with MD5 <sub>Login-User; with Salt, key-stretching >0</sub> &rarr; :yellow_circle:| [[1](https://www.urbackup.org/administration_manual.html#x1-250004.5)] [[2](https://github.com/uroni/urbackup_backend/blob/dev/urbackupserver/serverinterface/helper.cpp#L319)] | low key-stretching value|
 | wg-portal | all | bcrypt <sub>(without Salt)</sub> &rarr; :green_circle: | [[1](https://github.com/h44z/wg-portal/blob/master/internal/domain/user.go#L127)] | |
-| Wordpress  | all |  MD5 <sub>(with Salt + minimal key stretching)</sub> &rarr;:red_circle: | [[1](https://developer.wordpress.org/reference/functions/wp_hash_password/)] | better algorithms just like Argon2id available with Plugins |
+| Wordpress  | all |  MD5 <sub>(with Salt + minimal key stretching)</sub> &rarr; :red_circle: | [[1](https://developer.wordpress.org/reference/functions/wp_hash_password/)] | better algorithms just like Argon2id available with Plugins |
 
 **Operating Systems**
 | Program name | Versions | PH-Algorithm &rarr; Rating | Sources | Extras |
