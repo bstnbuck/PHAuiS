@@ -76,7 +76,7 @@
 | ISPconfig | all | crypt <sub>Linux defaults</sub> &rarr; :red_circle::yellow_circle: or :green_circle:|  |  |
 | Joomla  | >4.0.0 |  MD5 <sub>(without Salt)</sub> &rarr; :red_circle: <br> bcrypt (default) &rarr; :green_circle: <br> Argon2(i, id) &rarr; :green_circle::heavy_check_mark: | [[1](https://github.com/joomla/joomla-cms/blob/4.4-dev/libraries/src/User/UserHelper.php)] | |
 | KeePass | >2.X | AES-KDF &rarr; :red_circle: <br> Argon2(d, id) &rarr; :green_circle::heavy_check_mark: | [[1](https://keepass.info/help/base/security.html)] |  |
-| LastPass | - | PBKDF2 <sub>key-stretching 100.100</sub> &rarr; :green_circle::heavy_check_mark: | [[1](https://blog.lastpass.com/2022/12/notice-of-recent-security-incident/)] | |
+| LastPass | - | PBKDF2 <sub>key-stretching 100.100</sub> &rarr; :green_circle: | [[1](https://blog.lastpass.com/2022/12/notice-of-recent-security-incident/)] | |
 | LDAP | ? | SHA1, MD5 <sub>with and without Salt</sub> &rarr; :red_circle:, :red_circle::yellow_circle: <br> Linux crypt(3) (MD5, Blowfish, SHA2 (256, 512 bit)) <sub>with Salt and Key stretching</sub> &rarr; :red_circle::yellow_circle: up to :green_circle: | [[1](https://www.openldap.org/doc/admin24/security.html)] [[2](https://man7.org/linux/man-pages/man3/crypt.3.html)] [[3](https://www.rfc-editor.org/rfc/rfc4519.txt)] | official RFC specifies no encryption/hash |
 | Mastodon | all | bcrypt &rarr; :green_circle: | [[1](https://github.com/mastodon/mastodon/pull/24654#issuecomment-1522279207)] | |
 | Moodle | <2.3 |  MD5 &rarr; :red_circle: | [[1]()] |  |
